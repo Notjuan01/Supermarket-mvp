@@ -33,20 +33,29 @@
             Lblpaymode = new Label();
             tabcontrol1 = new TabControl();
             tabPagePayModeList = new TabPage();
+            BtnClose = new Button();
+            BtnDelete = new Button();
+            BtnEdit = new Button();
             BtnNew = new Button();
             DgPayMode = new DataGridView();
             BtnSearch = new Button();
             TxtSearch = new TextBox();
             label1 = new Label();
             tabPagePayModeDetail = new TabPage();
-            BtnEdit = new Button();
-            BtnDelete = new Button();
-            BtnClose = new Button();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            textBox2 = new TextBox();
+            label4 = new Label();
+            textBox3 = new TextBox();
+            BtnSave = new Button();
+            BtnCancel = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabcontrol1.SuspendLayout();
             tabPagePayModeList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).BeginInit();
+            tabPagePayModeDetail.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -73,7 +82,7 @@
             // 
             Lblpaymode.AutoSize = true;
             Lblpaymode.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Lblpaymode.Location = new Point(130, 9);
+            Lblpaymode.Location = new Point(130, 26);
             Lblpaymode.Name = "Lblpaymode";
             Lblpaymode.Size = new Size(185, 47);
             Lblpaymode.TabIndex = 0;
@@ -107,6 +116,33 @@
             tabPagePayModeList.TabIndex = 1;
             tabPagePayModeList.Text = "Pay Mode List";
             tabPagePayModeList.UseVisualStyleBackColor = true;
+            // 
+            // BtnClose
+            // 
+            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Location = new Point(601, 292);
+            BtnClose.Name = "BtnClose";
+            BtnClose.Size = new Size(183, 61);
+            BtnClose.TabIndex = 7;
+            BtnClose.UseVisualStyleBackColor = true;
+            // 
+            // BtnDelete
+            // 
+            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Location = new Point(601, 225);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(183, 61);
+            BtnDelete.TabIndex = 6;
+            BtnDelete.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Location = new Point(601, 158);
+            BtnEdit.Name = "BtnEdit";
+            BtnEdit.Size = new Size(183, 61);
+            BtnEdit.TabIndex = 5;
+            BtnEdit.UseVisualStyleBackColor = true;
             // 
             // BtnNew
             // 
@@ -162,40 +198,93 @@
             // 
             // tabPagePayModeDetail
             // 
+            tabPagePayModeDetail.Controls.Add(BtnCancel);
+            tabPagePayModeDetail.Controls.Add(BtnSave);
+            tabPagePayModeDetail.Controls.Add(textBox3);
+            tabPagePayModeDetail.Controls.Add(label4);
+            tabPagePayModeDetail.Controls.Add(textBox2);
+            tabPagePayModeDetail.Controls.Add(label3);
+            tabPagePayModeDetail.Controls.Add(textBox1);
+            tabPagePayModeDetail.Controls.Add(label2);
             tabPagePayModeDetail.Location = new Point(4, 24);
             tabPagePayModeDetail.Name = "tabPagePayModeDetail";
             tabPagePayModeDetail.Padding = new Padding(3);
-            tabPagePayModeDetail.Size = new Size(792, 337);
+            tabPagePayModeDetail.Size = new Size(792, 368);
             tabPagePayModeDetail.TabIndex = 2;
             tabPagePayModeDetail.Text = "Pay Mode Detail";
             tabPagePayModeDetail.UseVisualStyleBackColor = true;
             // 
-            // BtnEdit
+            // label2
             // 
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(601, 158);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(183, 61);
-            BtnEdit.TabIndex = 5;
-            BtnEdit.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(8, 16);
+            label2.Name = "label2";
+            label2.Size = new Size(85, 17);
+            label2.TabIndex = 0;
+            label2.Text = "Pay Mode id";
             // 
-            // BtnDelete
+            // textBox1
             // 
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(601, 225);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(183, 61);
-            BtnDelete.TabIndex = 6;
-            BtnDelete.UseVisualStyleBackColor = true;
+            textBox1.Location = new Point(8, 36);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(137, 23);
+            textBox1.TabIndex = 1;
             // 
-            // BtnClose
+            // label3
             // 
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(601, 292);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(183, 61);
-            BtnClose.TabIndex = 7;
-            BtnClose.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(8, 81);
+            label3.Name = "label3";
+            label3.Size = new Size(107, 17);
+            label3.TabIndex = 2;
+            label3.Text = "Pay Mode name";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(8, 101);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(290, 23);
+            textBox2.TabIndex = 3;
+            textBox2.Text = "Pay Mode Name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(8, 143);
+            label4.Name = "label4";
+            label4.Size = new Size(149, 17);
+            label4.TabIndex = 4;
+            label4.Text = "Pay Mode Observation";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(8, 163);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(290, 58);
+            textBox3.TabIndex = 5;
+            textBox3.Text = "Pay Mode Observation";
+            // 
+            // BtnSave
+            // 
+            BtnSave.Image = Properties.Resources.save;
+            BtnSave.Location = new Point(8, 250);
+            BtnSave.Name = "BtnSave";
+            BtnSave.Size = new Size(107, 68);
+            BtnSave.TabIndex = 6;
+            BtnSave.UseVisualStyleBackColor = true;
+            // 
+            // BtnCancel
+            // 
+            BtnCancel.Image = Properties.Resources.cancel;
+            BtnCancel.Location = new Point(159, 250);
+            BtnCancel.Name = "BtnCancel";
+            BtnCancel.Size = new Size(116, 68);
+            BtnCancel.TabIndex = 7;
+            BtnCancel.UseVisualStyleBackColor = true;
             // 
             // PayModeView
             // 
@@ -213,6 +302,8 @@
             tabPagePayModeList.ResumeLayout(false);
             tabPagePayModeList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DgPayMode).EndInit();
+            tabPagePayModeDetail.ResumeLayout(false);
+            tabPagePayModeDetail.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -232,5 +323,13 @@
         private Button BtnClose;
         private Button BtnDelete;
         private Button BtnEdit;
+        private TextBox textBox1;
+        private Label label2;
+        private Button BtnCancel;
+        private Button BtnSave;
+        private TextBox textBox3;
+        private Label label4;
+        private TextBox textBox2;
+        private Label label3;
     }
 }
