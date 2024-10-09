@@ -26,12 +26,13 @@ namespace Supermarket_mvp.presenters
             this.view.DeleteEvent += DeleteSelectedPayMode;
             this.view.SaveEvent += SavePayMode;
             this.view.CancelEvent += CancelAction;
+            this.payModeBindingSource = new BindingSource();
 
             this.view.SetPayModeListBildingSource(payModeBindingSource);
 
             LoadAllPayModeList();
 
-            this.view.show();
+            this.view.Show();
         }
 
         private void LoadAllPayModeList()

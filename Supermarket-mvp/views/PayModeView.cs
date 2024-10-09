@@ -82,10 +82,5 @@ namespace Supermarket_mvp.views
         {
             DgPayMode.DataSource = payModeList;
         }
-
-        public void show()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

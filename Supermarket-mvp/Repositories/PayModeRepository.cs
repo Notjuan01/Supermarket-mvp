@@ -37,23 +37,24 @@ namespace Supermarket_mvp.Repositories
         {
             var payModeList = new List<PayModeModel>();
             using (var connection = new SqlConnection(connectionString))
-            using (var cmd = connection.CreateCommand())
+            using (var command = new SqlCommand())
             {
                 connection.Open();
-                cmd.Connection = connection;
-                cmd.CommandText = "SELECT * FROM PayMode ORDER BY Pay_Mode_Id DESC";
-                using (var reader = cmd.ExecuteReader())
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM Paymode ORDER BY Pay_Mode_Id DESC";
+                using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
                         var payModeModel = new PayModeModel();
                         payModeModel.Id = (int)reader["Pay_Mode_Id"];
                         payModeModel.Name = reader["Pay_Mode_Name"].ToString();
-                        payModeModel.Observation = reader["Pay_ModeObservation"].ToString();
-                            }
+                        payModeModel.Observation = reader["Pay_Mode_Observation"].ToString();
+                        payModeList.Add(payModeModel);
+                    }
                 }
             }
-        return payModeList;
+            return payModeList;
         }
 
         public IEnumerable<PayModeModel> GetByValue(string value)
