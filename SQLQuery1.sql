@@ -1,10 +1,16 @@
 ﻿use Supermarket
-create table PayMode
+create table Customers
 (
- Pay_Mode_Id int identity (100000,1) primary key,
- Pay_Mode_Name nvarchar (50) not null,
- Pay_Mode_Observation nvarchar (50) not null,
+Customers_Id int identity (100000,1) primary key,
+Customers_Document_number Nvarchar(15) Not Null unique,
+Customers_first_name Nvarchar(50) Not Null,
+Customers_last_name Nvarchar(50) Not Null,
+Customers_address Nvarchar(80),
+Customers_birthday date,
+Customers_phone_numbers Nvarchar(16),
+Customers_email Nvarchar(100),
+
 )
 go
-insert into PayMode values('Cash', 'Cash mode')
-insert into PayMode values('Credit card', 'Credit card mode')
+insert into Customers values('16494028', 'Carlos','Martinez','Calle 60A #119-140','1968-12-26','3165833468','Mjuanpablo523@gmail.com')
+insert into Customers values('1107841591', 'Luis','Mainguez','Calle 104 #15a-26','2005-10-31','320841591','Luismaiguez579@gmail.com')

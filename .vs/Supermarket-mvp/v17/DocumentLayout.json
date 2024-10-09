@@ -1,30 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\",
+  "WorkspaceRootPath": "C:\\Users\\38513494\\Desktop\\Supermarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket-mvp\\supermarket-mvp\\repositories\\paymoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\repositories\\paymoderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket-mvp\\supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket-mvp\\supermarket-mvp\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\presenters\\mainpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket-mvp\\supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket-mvp\\supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/Supermarket/True/SqlTable/dbo.Customers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,78 +26,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PayModeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\Repositories\\PayModeRepository.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\Repositories\\PayModeRepository.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\Repositories\\PayModeRepository.cs",
-              "RelativeToolTip": "Supermarket-mvp\\Repositories\\PayModeRepository.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAADwv1cAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T06:16:40.164Z",
+              "Title": "dbo.Customers [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/Supermarket/True/SqlTable/dbo.Customers.sql",
+              "ToolTip": "dbo.Customers [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-09T20:07:26.311Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainView.cs",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\MainView.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\views\\MainView.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\MainView.cs",
-              "RelativeToolTip": "Supermarket-mvp\\views\\MainView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T06:12:12.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPresenter.cs",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\presenters\\MainPresenter.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\presenters\\MainPresenter.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\presenters\\MainPresenter.cs",
-              "RelativeToolTip": "Supermarket-mvp\\presenters\\MainPresenter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T05:35:17.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PayModeView.cs",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\PayModeView.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\views\\PayModeView.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\PayModeView.cs",
-              "RelativeToolTip": "Supermarket-mvp\\views\\PayModeView.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAYwBgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T21:31:29.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\MainView.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\views\\MainView.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\MainView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Supermarket-mvp\\views\\MainView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T03:28:59.695Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PayModeView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\PayModeView.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\views\\PayModeView.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket-Mvp\\Supermarket-mvp\\views\\PayModeView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Supermarket-mvp\\views\\PayModeView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T20:50:22.593Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
