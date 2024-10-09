@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
+    "C:\\Users\\juand\\Desktop\\trabajo de jp\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\Supermarket-mvp.csproj": {
+    "C:\\Users\\juand\\Desktop\\trabajo de jp\\Supermarket-mvp\\Supermarket-mvp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectUniqueName": "C:\\Users\\juand\\Desktop\\trabajo de jp\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "projectName": "Supermarket-mvp",
-        "projectPath": "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\Supermarket-mvp.csproj",
-        "packagesPath": "C:\\Users\\38513494\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\obj\\",
+        "projectPath": "C:\\Users\\juand\\Desktop\\trabajo de jp\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\juand\\Desktop\\trabajo de jp\\Supermarket-mvp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\38513494\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
