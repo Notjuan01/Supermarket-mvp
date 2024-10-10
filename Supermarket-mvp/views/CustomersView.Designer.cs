@@ -127,6 +127,7 @@
             // 
             // BtnClose
             // 
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.BackColor = Color.Silver;
             BtnClose.Image = Properties.Resources.cerrar;
             BtnClose.Location = new Point(591, 261);
@@ -137,6 +138,7 @@
             // 
             // BtnDelete
             // 
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.BackColor = Color.Silver;
             BtnDelete.Image = Properties.Resources.delete;
             BtnDelete.Location = new Point(591, 197);
@@ -147,6 +149,7 @@
             // 
             // BtnEdit
             // 
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.BackColor = Color.Silver;
             BtnEdit.Image = Properties.Resources.edit;
             BtnEdit.Location = new Point(591, 136);
@@ -157,6 +160,7 @@
             // 
             // BtnNew
             // 
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.BackColor = Color.Silver;
             BtnNew.Image = Properties.Resources._new;
             BtnNew.Location = new Point(591, 75);
@@ -169,6 +173,7 @@
             // 
             DgCustomers.AllowUserToAddRows = false;
             DgCustomers.AllowUserToDeleteRows = false;
+            DgCustomers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgCustomers.Location = new Point(10, 75);
             DgCustomers.Name = "DgCustomers";
@@ -178,6 +183,7 @@
             // 
             // BtnSearchC
             // 
+            BtnSearchC.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearchC.BackgroundImage = Properties.Resources.search_small;
             BtnSearchC.BackgroundImageLayout = ImageLayout.Zoom;
             BtnSearchC.Location = new Point(528, 33);
@@ -185,10 +191,10 @@
             BtnSearchC.Size = new Size(59, 36);
             BtnSearchC.TabIndex = 2;
             BtnSearchC.UseVisualStyleBackColor = true;
-            BtnSearchC.Click += BtnSearchC_Click;
             // 
             // TxtSearchC
             // 
+            TxtSearchC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearchC.Location = new Point(10, 37);
             TxtSearchC.Name = "TxtSearchC";
             TxtSearchC.PlaceholderText = "Data to Search";

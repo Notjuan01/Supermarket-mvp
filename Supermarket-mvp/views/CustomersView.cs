@@ -107,10 +107,22 @@ namespace Supermarket_mvp.views
         {
             DgCustomers.DataSource = CustomersList;
         }
-
-        private void BtnSearchC_Click(object sender, EventArgs e)
+        private static CustomersView instance;
+        public  static CustomersView GetInstance(Form parentContainer)
         {
-
+            if (instance == null   || instance.IsDisposed)
+            {
+                instance = new CustomersView();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }   
+                instance.BringToFront();
+            }
+            return instance;
         }
     }
 }

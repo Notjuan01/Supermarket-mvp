@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             panel1 = new Panel();
+            BtCustomers = new Button();
             BtnExit = new Button();
             BtPayMode = new Button();
             pictureBox1 = new PictureBox();
@@ -38,6 +40,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtCustomers);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtPayMode);
             panel1.Controls.Add(pictureBox1);
@@ -46,6 +49,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(200, 450);
             panel1.TabIndex = 0;
+            // 
+            // BtCustomers
+            // 
+            BtCustomers.BackgroundImage = (Image)resources.GetObject("BtCustomers.BackgroundImage");
+            BtCustomers.BackgroundImageLayout = ImageLayout.Zoom;
+            BtCustomers.Location = new Point(0, 172);
+            BtCustomers.Name = "BtCustomers";
+            BtCustomers.Size = new Size(197, 76);
+            BtCustomers.TabIndex = 3;
+            BtCustomers.UseVisualStyleBackColor = true;
             // 
             // BtnExit
             // 
@@ -99,5 +112,6 @@
         private Button BtPayMode;
         private PictureBox pictureBox1;
         private Button BtnExit;
+        private Button BtCustomers;
     }
 }

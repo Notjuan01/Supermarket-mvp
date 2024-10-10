@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using Supermarket_mvp.views;
 
 namespace Supermarket_mvp.Models
 {
@@ -47,5 +48,7 @@ namespace Supermarket_mvp.Models
         [Required(ErrorMessage = "Email is required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Customers Email must be between 3 and 50 characteres")]
         public string email { get; set; }
+
+       
     }
 }

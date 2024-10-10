@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Supermarket_mvp.Models;
 using Supermarket_mvp.views;
 using Supermarket_mvp.Repositories;
+using Supermarket_mvp._Repositories;
 
 namespace Supermarket_mvp.presenters
 {
@@ -20,6 +21,14 @@ namespace Supermarket_mvp.presenters
             this.sqlConnectionString = sqlConnectionString;
 
             this.mainView.ShowPayModeView += ShowPayModeView;
+            this.mainView.ShowCustomerView += ShowCustomersView;
+        }
+
+        private void ShowCustomersView(object? sender, EventArgs e)
+        {
+            ICustomersView view = CustomersView.GetInstance((MainView)mainView);
+            ICustomersRepostory repository = new CustomersRepository(sqlConnectionString);
+            new CustomersPresenter(view, repository);
         }
 
         private void ShowPayModeView(object? sender, EventArgs e)

@@ -47,13 +47,13 @@ namespace Supermarket_mvp._Repositories
                     {
                         var customersModel = new CustomersModel();
                         customersModel.Id = (int)reader["Customers_Id"];
-                        customersModel.document_number = reader["Customers_Document"].ToString();
-                        customersModel.firts_name = reader["Customers_Firts_Name"].ToString();
-                        customersModel.last_name = reader["Customers_Last_Name"].ToString();
-                        customersModel.address = reader["Customers_Addres"].ToString();
-                        customersModel.birthday = reader["Customers_Birthday"] != DBNull.Value ? (DateTime)reader["Customers_Birthday"] : (DateTime?)null;
-                        customersModel.phone_numbers = reader["Customers_Phone_Numbers"].ToString();
-                        customersModel.email = reader["Customers_Email"].ToString();
+                        customersModel.document_number = reader["Customers_Document_number"].ToString();
+                        customersModel.firts_name = reader["Customers_first_name"].ToString();
+                        customersModel.last_name = reader["Customers_last_name"].ToString();
+                        customersModel.address = reader["Customers_address"].ToString();
+                        customersModel.birthday = reader["Customers_birthday"] != DBNull.Value ? (DateTime)reader["Customers_Birthday"] : (DateTime?)null;
+                        customersModel.phone_numbers = reader["Customers_phone_numbers"].ToString();
+                        customersModel.email = reader["Customers_email"].ToString();
                         customersList.Add(customersModel);
                     }
                 }
