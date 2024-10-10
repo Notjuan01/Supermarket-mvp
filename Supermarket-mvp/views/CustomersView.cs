@@ -34,9 +34,41 @@ namespace Supermarket_mvp.views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
-            BtnNew.Click += delegate { AddNewEvent?.Invoke(this, EventArgs.Empty); };
+            BtnNew.Click += delegate {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
 
-            BtnEdit.Click += delegate
+                tabControl1.TabPages.Remove(tabPageCustomersList);
+                tabControl1.TabPages.Add(tabPageCustomersDetail);
+                tabPageCustomersDetail.Text = "Add New Customers";
+            };
+            BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty);
+                
+                tabControl1.TabPages.Remove(tabPageCustomersList);
+                tabControl1.TabPages.Add(tabPageCustomersDetail);
+                tabPageCustomersDetail.Text = "Edit New Customers";
+            };
+            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty);
+                var result = MessageBox.Show(
+
+                    "Are you sure you want to delete the selected Customers",
+                    "warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+            
+            };
+
+            BtnSaveC.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); 
+            if (isSuccessfull)
+                {
+                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
+                    tabControl1.TabPages.Add(tabPageCustomersList);
+                }
+                MessageBox.Show(Message);
+            };
             {
                 {
                     AddNewEvent?.Invoke(this, EventArgs.Empty);
@@ -44,11 +76,14 @@ namespace Supermarket_mvp.views
                     tabControl1.TabPages.Add(tabPageCustomersDetail);
                     tabPageCustomersDetail.Text = "Add Customers";
                 };
-            };
-            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
-            BtnSaveC.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
-            BtnCancelC.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
 
+                BtnCancelC.Click += delegate{
+                    CancelEvent?.Invoke(this, EventArgs.Empty);
+
+                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
+                    tabControl1.TabPages.Add(tabPageCustomersList);
+                };
+            }
         }
 
         public string CustomersId
@@ -125,6 +160,8 @@ namespace Supermarket_mvp.views
             DgCustomers.DataSource = CustomersList;
         }
         private static CustomersView instance;
+        private TabPage tabPageCustomersList;
+
         public  static CustomersView GetInstance(Form parentContainer)
         {
             if (instance == null   || instance.IsDisposed)

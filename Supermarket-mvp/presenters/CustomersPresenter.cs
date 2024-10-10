@@ -50,8 +50,36 @@ namespace Supermarket_mvp.presenters
 
         private void SaveCustomers(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var customers = new CustomersModel();
+            customers.Id = Convert.ToInt32(view.CustomersId);
+            customers.document_number = customers.document_number;
+            customers.firts_name = customers.firts_name;
+            customers.last_name = customers.last_name;
+            customers.address = customers.address;
+            customers.birthday = customers.birthday;
+            customers.phone_numbers = customers.phone_numbers;
+            customers.email = customers.email;
+
+            try
+            {
+                if (view.IsEdit)
+                {
+                    repository.Edit(customers);
+                    view.Message = "Customers edited sucessfuly";
+                }
+                else
+                {
+                    repository.Add(customers);
+                    view.Message = "Customers added succesfuly";
+                }
+            }
+            catch(Exception ex) 
+            {
+                view.IsSuccessful = false;
+                view.Message = ex.Message;
+            }
         }
+
 
         private void DeleteSelectedCustomers(object? sender, EventArgs e)
         {
@@ -60,12 +88,22 @@ namespace Supermarket_mvp.presenters
 
         private void LoadSelecCustomersToEdit(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+        var customers = (CustomersModel)customersBindingSource.DataSource;
+
+            view.CustomersId = customers.Id.ToString();
+            view.CustomersDocument_Number = customers.document_number;
+            view.CustomersFirts_Name = customers.firts_name;
+            view.CustomersLast_Name = customers.last_name;
+            view.CustomersAddress = customers.address;
+            view.CustomersBirthday = customers.birthday;
+            view.CustomersPhone_Numbers = customers.phone_numbers;
+            view.CustomersEmail = customers.email;
+
         }
 
         private void AddNewCustomers(object? sender, EventArgs e)
         {
-            MessageBox.Show("Hizo clic en el boton nuevo");
+            view.IsEdit = false;
         }
 
         private void SearchCustomers(object? sender, EventArgs e)
