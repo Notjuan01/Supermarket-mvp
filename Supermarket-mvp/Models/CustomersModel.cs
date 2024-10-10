@@ -36,7 +36,7 @@ namespace Supermarket_mvp.Models
 
         [DisplayName("Customers Birthday")]
         [Required(ErrorMessage = "Birthday is required")]
-        public DateTime birthday { get; set; }
+        public DateTime? birthday { get; set; }
 
         [DisplayName("Customers Phone_Numbers")]
         [Required(ErrorMessage = "Phone_Number is required")]
