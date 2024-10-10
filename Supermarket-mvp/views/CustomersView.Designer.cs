@@ -185,6 +185,7 @@
             BtnSearchC.Size = new Size(59, 36);
             BtnSearchC.TabIndex = 2;
             BtnSearchC.UseVisualStyleBackColor = true;
+            BtnSearchC.Click += BtnSearchC_Click;
             // 
             // TxtSearchC
             // 

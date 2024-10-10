@@ -35,13 +35,15 @@ namespace Supermarket_mvp.views
             };
         }
 
-        public string CustomersId 
+        public string CustomersId
         {
-            get => throw new NotImplementedException(); set => throw new NotImplementedException(); 
+            get => throw new NotImplementedException(); set => throw new NotImplementedException();
         }
-        public string CustomersDocument_Number { get { return TxtCId.Text; } 
-                                                 set { TxtCId.Text = value; } 
-                                               }
+        public string CustomersDocument_Number
+        {
+            get { return TxtCId.Text; }
+            set { TxtCId.Text = value; }
+        }
         public string CustomersFirts_Name
         {
             get { return TxtcName.Text; }
@@ -72,6 +74,13 @@ namespace Supermarket_mvp.views
             get { return TxtEmailC.Text; }
             set { TxtEmailC.Text = value; }
         }
+
+        public string SearchValue
+        {
+            get { return TxtSearchC.Text; }
+            set { TxtSearchC.Text = value; }
+        }
+
         public bool IsEdit
         {
             get { return isEdit; }
@@ -86,17 +95,22 @@ namespace Supermarket_mvp.views
         {
             get { return menssage; }
             set { menssage = value; }
-        }
-        public event EventHandler SearchEvent;
+        } 
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
+        public event EventHandler SearchEvent;
 
         public void SetCustomersListBildingSource(BindingSource CustomersList)
         {
-            DgCustomers.DataSource =   CustomersList;
+            DgCustomers.DataSource = CustomersList;
+        }
+
+        private void BtnSearchC_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
