@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Supermarket_mvp.views
 {
     public partial class PayModeView : Form, IPayModeView
@@ -21,7 +22,6 @@ namespace Supermarket_mvp.views
             AssociateAndRaiseViewEvents();
 
             tabcontrol1.TabPages.Remove(tabPagePayModeDetail);
-
             BtnClose.Click += delegate { this.Close(); };
         }
 
@@ -32,15 +32,66 @@ namespace Supermarket_mvp.views
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                SearchEvent?.Invoke(this, EventArgs.Empty);
+                    SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            BtnNew.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+                tabcontrol1.TabPages.Remove(tabPagePayModeList);
+                tabcontrol1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Add New Pay Mode";
+            };
+
+
+            BtnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+
+                tabcontrol1.TabPages.Remove(tabPagePayModeList);
+                tabcontrol1.TabPages.Add(tabPagePayModeDetail);
+                tabPagePayModeDetail.Text = "Edit Pay Mode";
+
+            };
+
+            BtnDelete.Click += delegate
+            {
+                var result = MessageBox.Show(
+                    "Are you sure you want to delete the selected Pay Mode",
+                    "Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+
+            };
+            BtnSave.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+
+                if (isSuccessful)
+                {
+                    tabcontrol1.TabPages.Remove(tabPagePayModeDetail);
+                    tabcontrol1.TabPages.Add(tabPagePayModeList);
+                }
+                MessageBox.Show(Message);
+            };
+            BtnCancel.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabcontrol1.TabPages.Remove(tabPagePayModeDetail);
+                tabcontrol1.TabPages.Add(tabPagePayModeList);
+            };
+
         }
 
         public string PayModeId
         {
             get { return TxtPayModeId.Text; }
-            set { TxtPayModeId.Text = value; } 
+            set { TxtPayModeId.Text = value; }
         }
         public string PayModeName
         {
@@ -84,6 +135,7 @@ namespace Supermarket_mvp.views
         {
             DgPayMode.DataSource = payModeList;
         }
+
         private static PayModeView instance;
 
         public static PayModeView GetInstance(Form parentContainer)

@@ -21,11 +21,12 @@ namespace Supermarket_mvp.views
             AssociateAndRaizeViewEvents();
 
             tabControl1.TabPages.Remove(tabPageCustomersDetail);
+            BtnClose.Click += delegate { this.Close(); };
         }
 
         private void AssociateAndRaizeViewEvents()
         {
-            BtnSearchC.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             TxtSearchC.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -33,16 +34,32 @@ namespace Supermarket_mvp.views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            BtnNew.Click += delegate { AddNewEvent?.Invoke(this, EventArgs.Empty); };
+
+            BtnEdit.Click += delegate
+            {
+                {
+                    AddNewEvent?.Invoke(this, EventArgs.Empty);
+                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
+                    tabControl1.TabPages.Add(tabPageCustomersDetail);
+                    tabPageCustomersDetail.Text = "Add Customers";
+                };
+            };
+            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSaveC.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            BtnCancelC.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+
         }
 
         public string CustomersId
         {
-            get => throw new NotImplementedException(); set => throw new NotImplementedException();
+            get { return TxtCId.Text; }
+            set { TxtCId.Text = value; }
         }
         public string CustomersDocument_Number
         {
-            get { return TxtCId.Text; }
-            set { TxtCId.Text = value; }
+            get { return TxtDocument.Text; }
+            set { TxtDocument.Text = value; }
         }
         public string CustomersFirts_Name
         {
@@ -113,6 +130,10 @@ namespace Supermarket_mvp.views
             if (instance == null   || instance.IsDisposed)
             {
                 instance = new CustomersView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {

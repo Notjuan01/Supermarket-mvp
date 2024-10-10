@@ -38,10 +38,11 @@
             BtnEdit = new Button();
             BtnNew = new Button();
             DgCustomers = new DataGridView();
-            BtnSearchC = new Button();
             TxtSearchC = new TextBox();
             LblSearch = new Label();
             tabPageCustomersDetail = new TabPage();
+            TxtDocument = new TextBox();
+            label2 = new Label();
             BtnCancelC = new Button();
             BtnSaveC = new Button();
             TxtEmailC = new TextBox();
@@ -58,6 +59,7 @@
             TxtcName = new Label();
             TxtCId = new TextBox();
             TxtCustomersId = new Label();
+            BtnSearch = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -109,12 +111,12 @@
             // 
             // Tabcontrol
             // 
+            Tabcontrol.Controls.Add(BtnSearch);
             Tabcontrol.Controls.Add(BtnClose);
             Tabcontrol.Controls.Add(BtnDelete);
             Tabcontrol.Controls.Add(BtnEdit);
             Tabcontrol.Controls.Add(BtnNew);
             Tabcontrol.Controls.Add(DgCustomers);
-            Tabcontrol.Controls.Add(BtnSearchC);
             Tabcontrol.Controls.Add(TxtSearchC);
             Tabcontrol.Controls.Add(LblSearch);
             Tabcontrol.Location = new Point(4, 24);
@@ -181,17 +183,6 @@
             DgCustomers.Size = new Size(575, 241);
             DgCustomers.TabIndex = 3;
             // 
-            // BtnSearchC
-            // 
-            BtnSearchC.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearchC.BackgroundImage = Properties.Resources.search_small;
-            BtnSearchC.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnSearchC.Location = new Point(528, 33);
-            BtnSearchC.Name = "BtnSearchC";
-            BtnSearchC.Size = new Size(59, 36);
-            BtnSearchC.TabIndex = 2;
-            BtnSearchC.UseVisualStyleBackColor = true;
-            // 
             // TxtSearchC
             // 
             TxtSearchC.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -213,6 +204,8 @@
             // 
             // tabPageCustomersDetail
             // 
+            tabPageCustomersDetail.Controls.Add(TxtDocument);
+            tabPageCustomersDetail.Controls.Add(label2);
             tabPageCustomersDetail.Controls.Add(BtnCancelC);
             tabPageCustomersDetail.Controls.Add(BtnSaveC);
             tabPageCustomersDetail.Controls.Add(TxtEmailC);
@@ -236,6 +229,24 @@
             tabPageCustomersDetail.TabIndex = 1;
             tabPageCustomersDetail.Text = "Customers Detail";
             tabPageCustomersDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtDocument
+            // 
+            TxtDocument.Location = new Point(8, 74);
+            TxtDocument.Name = "TxtDocument";
+            TxtDocument.Size = new Size(158, 23);
+            TxtDocument.TabIndex = 17;
+            TxtDocument.Text = "Document number";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(8, 54);
+            label2.Name = "label2";
+            label2.Size = new Size(193, 17);
+            label2.TabIndex = 16;
+            label2.Text = "Customers Document number";
             // 
             // BtnCancelC
             // 
@@ -295,7 +306,7 @@
             // 
             // TxtBirthdayC
             // 
-            TxtBirthdayC.Location = new Point(10, 264);
+            TxtBirthdayC.Location = new Point(10, 285);
             TxtBirthdayC.Name = "TxtBirthdayC";
             TxtBirthdayC.Size = new Size(254, 23);
             TxtBirthdayC.TabIndex = 9;
@@ -305,7 +316,7 @@
             // 
             LblBirthday.AutoSize = true;
             LblBirthday.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LblBirthday.Location = new Point(10, 244);
+            LblBirthday.Location = new Point(10, 265);
             LblBirthday.Name = "LblBirthday";
             LblBirthday.Size = new Size(129, 17);
             LblBirthday.TabIndex = 8;
@@ -313,7 +324,7 @@
             // 
             // TxtAddress
             // 
-            TxtAddress.Location = new Point(10, 204);
+            TxtAddress.Location = new Point(10, 225);
             TxtAddress.Name = "TxtAddress";
             TxtAddress.Size = new Size(254, 23);
             TxtAddress.TabIndex = 7;
@@ -323,7 +334,7 @@
             // 
             LblAddress.AutoSize = true;
             LblAddress.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LblAddress.Location = new Point(10, 184);
+            LblAddress.Location = new Point(10, 205);
             LblAddress.Name = "LblAddress";
             LblAddress.Size = new Size(126, 17);
             LblAddress.TabIndex = 6;
@@ -331,7 +342,7 @@
             // 
             // TxtLastName
             // 
-            TxtLastName.Location = new Point(8, 149);
+            TxtLastName.Location = new Point(8, 170);
             TxtLastName.Name = "TxtLastName";
             TxtLastName.Size = new Size(254, 23);
             TxtLastName.TabIndex = 5;
@@ -341,7 +352,7 @@
             // 
             LblLastName.AutoSize = true;
             LblLastName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LblLastName.Location = new Point(8, 129);
+            LblLastName.Location = new Point(8, 150);
             LblLastName.Name = "LblLastName";
             LblLastName.Size = new Size(142, 17);
             LblLastName.TabIndex = 4;
@@ -349,7 +360,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(8, 94);
+            textBox2.Location = new Point(8, 115);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(254, 23);
             textBox2.TabIndex = 3;
@@ -359,7 +370,7 @@
             // 
             TxtcName.AutoSize = true;
             TxtcName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TxtcName.Location = new Point(8, 74);
+            TxtcName.Location = new Point(8, 95);
             TxtcName.Name = "TxtcName";
             TxtcName.Size = new Size(144, 17);
             TxtcName.TabIndex = 2;
@@ -367,7 +378,7 @@
             // 
             // TxtCId
             // 
-            TxtCId.Location = new Point(8, 37);
+            TxtCId.Location = new Point(8, 28);
             TxtCId.Name = "TxtCId";
             TxtCId.Size = new Size(158, 23);
             TxtCId.TabIndex = 1;
@@ -377,11 +388,25 @@
             // 
             TxtCustomersId.AutoSize = true;
             TxtCustomersId.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TxtCustomersId.Location = new Point(8, 17);
+            TxtCustomersId.Location = new Point(8, 8);
             TxtCustomersId.Name = "TxtCustomersId";
             TxtCustomersId.Size = new Size(89, 17);
             TxtCustomersId.TabIndex = 0;
             TxtCustomersId.Text = "Customers Id";
+            // 
+            // BtnSearch
+            // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnSearch.BackColor = Color.Silver;
+            BtnSearch.FlatStyle = FlatStyle.Popup;
+            BtnSearch.ForeColor = SystemColors.ControlText;
+            BtnSearch.Image = Properties.Resources.search_small;
+            BtnSearch.Location = new Point(541, 28);
+            BtnSearch.Name = "BtnSearch";
+            BtnSearch.Size = new Size(44, 38);
+            BtnSearch.TabIndex = 8;
+            BtnSearch.TextImageRelation = TextImageRelation.TextAboveImage;
+            BtnSearch.UseVisualStyleBackColor = false;
             // 
             // CustomersView
             // 
@@ -414,7 +439,6 @@
         private TabPage tabPageCustomersDetail;
         private Label LblSearch;
         private TextBox TxtSearchC;
-        private Button BtnSearchC;
         private Button BtnClose;
         private Button BtnDelete;
         private Button BtnEdit;
@@ -436,5 +460,8 @@
         private Label LblPhone;
         private Button BtnCancelC;
         private Button BtnSaveC;
+        private TextBox TxtDocument;
+        private Label label2;
+        private Button BtnSearch;
     }
 }

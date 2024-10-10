@@ -244,9 +244,9 @@
             TxtPayModeObservation.Location = new Point(8, 163);
             TxtPayModeObservation.Multiline = true;
             TxtPayModeObservation.Name = "TxtPayModeObservation";
+            TxtPayModeObservation.PlaceholderText = "Pay Mode Observation";
             TxtPayModeObservation.Size = new Size(290, 58);
             TxtPayModeObservation.TabIndex = 5;
-            TxtPayModeObservation.Text = "Pay Mode Observation";
             // 
             // label4
             // 
@@ -262,9 +262,9 @@
             // 
             TxtPayModeName.Location = new Point(8, 101);
             TxtPayModeName.Name = "TxtPayModeName";
+            TxtPayModeName.PlaceholderText = "Pay Mode Name";
             TxtPayModeName.Size = new Size(290, 23);
             TxtPayModeName.TabIndex = 3;
-            TxtPayModeName.Text = "Pay Mode Name";
             // 
             // label3
             // 
@@ -280,6 +280,7 @@
             // 
             TxtPayModeId.Location = new Point(8, 36);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.PlaceholderText = "0";
             TxtPayModeId.Size = new Size(137, 23);
             TxtPayModeId.TabIndex = 1;
             // 
