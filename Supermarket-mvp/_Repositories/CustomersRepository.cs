@@ -51,7 +51,7 @@ namespace Supermarket_mvp._Repositories
                         customersModel.firts_name = reader["Customers_first_name"].ToString();
                         customersModel.last_name = reader["Customers_last_name"].ToString();
                         customersModel.address = reader["Customers_address"].ToString();
-                        customersModel.birthday = reader["Customers_birthday"] != DBNull.Value ? (DateTime)reader["Customers_Birthday"] : (DateTime?)null;
+                        customersModel.birthday = (DateTime)reader["Customers_birthday"];
                         customersModel.phone_numbers = reader["Customers_phone_numbers"].ToString();
                         customersModel.email = reader["Customers_email"].ToString();
                         customersList.Add(customersModel);
@@ -71,7 +71,7 @@ namespace Supermarket_mvp._Repositories
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM Customers WHERE Customers_Id=@id or Customers_Firts_Name LIKE @name+ '%'
+                command.CommandText = @"SELECT * FROM Customers WHERE Customers_Id=@id or Customers_first_name LIKE @name+ '%'
                                       ORDER by Customers_Id DESC";
                 command.Parameters.Add("@id", SqlDbType.Int).Value = customersId;
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = customersName;
@@ -81,13 +81,12 @@ namespace Supermarket_mvp._Repositories
                     {
                         var customers = new CustomersModel();
                         customers.Id = (int)reader["Customers_Id"];
-                        customers.document_number = reader["Customers_Document"].ToString();
-                        customers.firts_name = reader["Customers_Firts_Name"].ToString();
-                        customers.last_name = reader["Customers_Last_Name"].ToString();
-                        customers.address = reader["Customers_Addres"].ToString();
-                        customers.birthday = reader["Customers_Birthday"] != DBNull.Value ? (DateTime)reader["Customers_Birthday"] : (DateTime?)null;
-                        customers.phone_numbers = reader["Customers_Phone_Numbers"].ToString();
-                        customers.email = reader["Customers_Email"].ToString();
+                        customers.document_number = reader["Customers_Document_number"].ToString();
+                        customers.firts_name = reader["Customers_first_Name"].ToString();
+                        customers.last_name = reader["Customers_last_Name"].ToString();
+                        customers.address = reader["Customers_address"].ToString();
+                        customers.birthday = (DateTime) reader["customers_birthday"];
+                        customers.email = reader["Customers_email"].ToString();
                         customersList.Add(customers);
                     }
                 }

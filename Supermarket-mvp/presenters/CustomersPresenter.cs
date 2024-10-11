@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Supermarket_mvp.views;
 using Supermarket_mvp.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Supermarket_mvp.presenters
@@ -45,20 +46,20 @@ namespace Supermarket_mvp.presenters
 
         private void CancelAction(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+        CleanViewFields();
         }
 
         private void SaveCustomers(object? sender, EventArgs e)
         {
             var customers = new CustomersModel();
             customers.Id = Convert.ToInt32(view.CustomersId);
-            customers.document_number = customers.document_number;
-            customers.firts_name = customers.firts_name;
-            customers.last_name = customers.last_name;
-            customers.address = customers.address;
-            customers.birthday = customers.birthday;
-            customers.phone_numbers = customers.phone_numbers;
-            customers.email = customers.email;
+            customers.document_number = view.CustomersDocument_Number;
+            customers.firts_name = view.CustomersFirts_Name;
+            customers.last_name = view.CustomersLast_Name;
+            customers.address = view.CustomersAddress;
+            customers.birthday = DateTime.TryParse(view.CustomersBirthday, out var parsedDate) ? parsedDate : customers.birthday;
+            customers.phone_numbers = view.CustomersPhone_Numbers;
+            customers.email = view.CustomersEmail;
 
             try
             {
@@ -79,23 +80,49 @@ namespace Supermarket_mvp.presenters
                 view.Message = ex.Message;
             }
         }
+        private void CleanViewFields()
+        {
+            view.CustomersId = "0";
+            view.CustomersDocument_Number = "";
+            view.CustomersFirts_Name = "";
+            view.CustomersLast_Name = "";
+            view.CustomersAddress = "";
+            view.CustomersBirthday = "";
+            view.CustomersPhone_Numbers = "";
+            view.CustomersEmail = "";
+
+
+        }
+
 
 
         private void DeleteSelectedCustomers(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var customers = (CustomersModel)customersBindingSource.Current;
+                repository.Delete(customers.Id);
+                view.IsSuccessful = true;
+                view.Message = "Customers deleted Successfuly";
+                LoadAllCustomersList();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = "An error ocurred, could not delete customer";
+            }
         }
 
         private void LoadSelecCustomersToEdit(object? sender, EventArgs e)
         {
-        var customers = (CustomersModel)customersBindingSource.DataSource;
+        var customers = (CustomersModel)customersBindingSource.Current;
 
             view.CustomersId = customers.Id.ToString();
             view.CustomersDocument_Number = customers.document_number;
             view.CustomersFirts_Name = customers.firts_name;
             view.CustomersLast_Name = customers.last_name;
             view.CustomersAddress = customers.address;
-            view.CustomersBirthday = customers.birthday;
+            view.CustomersBirthday = customers.birthday.ToString();
             view.CustomersPhone_Numbers = customers.phone_numbers;
             view.CustomersEmail = customers.email;
 

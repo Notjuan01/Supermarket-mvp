@@ -281,8 +281,10 @@
             TxtPayModeId.Location = new Point(8, 36);
             TxtPayModeId.Name = "TxtPayModeId";
             TxtPayModeId.PlaceholderText = "0";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(137, 23);
             TxtPayModeId.TabIndex = 1;
+            TxtPayModeId.Text = "0";
             // 
             // label2
             // 

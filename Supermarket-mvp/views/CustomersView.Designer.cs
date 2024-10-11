@@ -32,7 +32,8 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             tabControl1 = new TabControl();
-            Tabcontrol = new TabPage();
+            tabPageCustomersList = new TabPage();
+            BtnSearch = new Button();
             BtnClose = new Button();
             BtnDelete = new Button();
             BtnEdit = new Button();
@@ -59,11 +60,10 @@
             TxtcName = new Label();
             TxtCId = new TextBox();
             TxtCustomersId = new Label();
-            BtnSearch = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
-            Tabcontrol.SuspendLayout();
+            tabPageCustomersList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomers).BeginInit();
             tabPageCustomersDetail.SuspendLayout();
             SuspendLayout();
@@ -100,7 +100,7 @@
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(Tabcontrol);
+            tabControl1.Controls.Add(tabPageCustomersList);
             tabControl1.Controls.Add(tabPageCustomersDetail);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 100);
@@ -109,23 +109,37 @@
             tabControl1.Size = new Size(800, 350);
             tabControl1.TabIndex = 2;
             // 
-            // Tabcontrol
+            // tabPageCustomersList
             // 
-            Tabcontrol.Controls.Add(BtnSearch);
-            Tabcontrol.Controls.Add(BtnClose);
-            Tabcontrol.Controls.Add(BtnDelete);
-            Tabcontrol.Controls.Add(BtnEdit);
-            Tabcontrol.Controls.Add(BtnNew);
-            Tabcontrol.Controls.Add(DgCustomers);
-            Tabcontrol.Controls.Add(TxtSearchC);
-            Tabcontrol.Controls.Add(LblSearch);
-            Tabcontrol.Location = new Point(4, 24);
-            Tabcontrol.Name = "Tabcontrol";
-            Tabcontrol.Padding = new Padding(3);
-            Tabcontrol.Size = new Size(792, 322);
-            Tabcontrol.TabIndex = 0;
-            Tabcontrol.Text = "Customers List";
-            Tabcontrol.UseVisualStyleBackColor = true;
+            tabPageCustomersList.Controls.Add(BtnSearch);
+            tabPageCustomersList.Controls.Add(BtnClose);
+            tabPageCustomersList.Controls.Add(BtnDelete);
+            tabPageCustomersList.Controls.Add(BtnEdit);
+            tabPageCustomersList.Controls.Add(BtnNew);
+            tabPageCustomersList.Controls.Add(DgCustomers);
+            tabPageCustomersList.Controls.Add(TxtSearchC);
+            tabPageCustomersList.Controls.Add(LblSearch);
+            tabPageCustomersList.Location = new Point(4, 24);
+            tabPageCustomersList.Name = "tabPageCustomersList";
+            tabPageCustomersList.Padding = new Padding(3);
+            tabPageCustomersList.Size = new Size(792, 322);
+            tabPageCustomersList.TabIndex = 0;
+            tabPageCustomersList.Text = "Customers List";
+            tabPageCustomersList.UseVisualStyleBackColor = true;
+            // 
+            // BtnSearch
+            // 
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnSearch.BackColor = Color.Silver;
+            BtnSearch.FlatStyle = FlatStyle.Popup;
+            BtnSearch.ForeColor = SystemColors.ControlText;
+            BtnSearch.Image = Properties.Resources.search_small;
+            BtnSearch.Location = new Point(541, 28);
+            BtnSearch.Name = "BtnSearch";
+            BtnSearch.Size = new Size(44, 38);
+            BtnSearch.TabIndex = 8;
+            BtnSearch.TextImageRelation = TextImageRelation.TextAboveImage;
+            BtnSearch.UseVisualStyleBackColor = false;
             // 
             // BtnClose
             // 
@@ -234,9 +248,9 @@
             // 
             TxtDocument.Location = new Point(8, 74);
             TxtDocument.Name = "TxtDocument";
+            TxtDocument.PlaceholderText = "Document number";
             TxtDocument.Size = new Size(158, 23);
             TxtDocument.TabIndex = 17;
-            TxtDocument.Text = "Document number";
             // 
             // label2
             // 
@@ -272,9 +286,9 @@
             // 
             TxtEmailC.Location = new Point(319, 94);
             TxtEmailC.Name = "TxtEmailC";
+            TxtEmailC.PlaceholderText = "Phone Email";
             TxtEmailC.Size = new Size(254, 23);
             TxtEmailC.TabIndex = 13;
-            TxtEmailC.Text = "Phone Email";
             // 
             // LblEmailC
             // 
@@ -290,9 +304,9 @@
             // 
             TxtPhoneC.Location = new Point(319, 37);
             TxtPhoneC.Name = "TxtPhoneC";
+            TxtPhoneC.PlaceholderText = "Phone Number";
             TxtPhoneC.Size = new Size(254, 23);
             TxtPhoneC.TabIndex = 11;
-            TxtPhoneC.Text = "Phone Number";
             // 
             // LblPhone
             // 
@@ -308,9 +322,9 @@
             // 
             TxtBirthdayC.Location = new Point(10, 285);
             TxtBirthdayC.Name = "TxtBirthdayC";
+            TxtBirthdayC.PlaceholderText = "Birthday";
             TxtBirthdayC.Size = new Size(254, 23);
             TxtBirthdayC.TabIndex = 9;
-            TxtBirthdayC.Text = "Birthday";
             // 
             // LblBirthday
             // 
@@ -326,9 +340,9 @@
             // 
             TxtAddress.Location = new Point(10, 225);
             TxtAddress.Name = "TxtAddress";
+            TxtAddress.PlaceholderText = "Address";
             TxtAddress.Size = new Size(254, 23);
             TxtAddress.TabIndex = 7;
-            TxtAddress.Text = "Address";
             // 
             // LblAddress
             // 
@@ -344,9 +358,9 @@
             // 
             TxtLastName.Location = new Point(8, 170);
             TxtLastName.Name = "TxtLastName";
+            TxtLastName.PlaceholderText = "Last Name";
             TxtLastName.Size = new Size(254, 23);
             TxtLastName.TabIndex = 5;
-            TxtLastName.Text = "Last Name";
             // 
             // LblLastName
             // 
@@ -362,9 +376,9 @@
             // 
             textBox2.Location = new Point(8, 115);
             textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "First Name";
             textBox2.Size = new Size(254, 23);
             textBox2.TabIndex = 3;
-            textBox2.Text = "First Name";
             // 
             // TxtcName
             // 
@@ -380,9 +394,10 @@
             // 
             TxtCId.Location = new Point(8, 28);
             TxtCId.Name = "TxtCId";
+            TxtCId.ReadOnly = true;
             TxtCId.Size = new Size(158, 23);
             TxtCId.TabIndex = 1;
-            TxtCId.Text = "Id";
+            TxtCId.Text = "0";
             // 
             // TxtCustomersId
             // 
@@ -393,20 +408,6 @@
             TxtCustomersId.Size = new Size(89, 17);
             TxtCustomersId.TabIndex = 0;
             TxtCustomersId.Text = "Customers Id";
-            // 
-            // BtnSearch
-            // 
-            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearch.BackColor = Color.Silver;
-            BtnSearch.FlatStyle = FlatStyle.Popup;
-            BtnSearch.ForeColor = SystemColors.ControlText;
-            BtnSearch.Image = Properties.Resources.search_small;
-            BtnSearch.Location = new Point(541, 28);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(44, 38);
-            BtnSearch.TabIndex = 8;
-            BtnSearch.TextImageRelation = TextImageRelation.TextAboveImage;
-            BtnSearch.UseVisualStyleBackColor = false;
             // 
             // CustomersView
             // 
@@ -421,8 +422,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
-            Tabcontrol.ResumeLayout(false);
-            Tabcontrol.PerformLayout();
+            tabPageCustomersList.ResumeLayout(false);
+            tabPageCustomersList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomers).EndInit();
             tabPageCustomersDetail.ResumeLayout(false);
             tabPageCustomersDetail.PerformLayout();
@@ -435,7 +436,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private TabControl tabControl1;
-        private TabPage Tabcontrol;
+        private TabPage tabPageCustomersList;
         private TabPage tabPageCustomersDetail;
         private Label LblSearch;
         private TextBox TxtSearchC;

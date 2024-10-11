@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket_mvp.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Azure.Core.HttpHeader;
 
 namespace Supermarket_mvp.views
 {
@@ -15,6 +17,7 @@ namespace Supermarket_mvp.views
         private bool isEdit;
         private bool isSuccessfull;
         private string menssage;
+
         public CustomersView()
         {
             InitializeComponent();
@@ -34,20 +37,25 @@ namespace Supermarket_mvp.views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
-            BtnNew.Click += delegate {
+            BtnNew.Click += delegate
+            {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageCustomersList);
                 tabControl1.TabPages.Add(tabPageCustomersDetail);
                 tabPageCustomersDetail.Text = "Add New Customers";
             };
-            BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty);
-                
+            BtnEdit.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+
                 tabControl1.TabPages.Remove(tabPageCustomersList);
                 tabControl1.TabPages.Add(tabPageCustomersDetail);
                 tabPageCustomersDetail.Text = "Edit New Customers";
             };
-            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty);
+            BtnDelete.Click += delegate
+            {
+                DeleteEvent?.Invoke(this, EventArgs.Empty);
                 var result = MessageBox.Show(
 
                     "Are you sure you want to delete the selected Customers",
@@ -58,11 +66,13 @@ namespace Supermarket_mvp.views
                     DeleteEvent?.Invoke(this, EventArgs.Empty);
                     MessageBox.Show(Message);
                 }
-            
+
             };
 
-            BtnSaveC.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); 
-            if (isSuccessfull)
+            BtnSaveC.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessfull)
                 {
                     tabControl1.TabPages.Remove(tabPageCustomersDetail);
                     tabControl1.TabPages.Add(tabPageCustomersList);
@@ -77,7 +87,8 @@ namespace Supermarket_mvp.views
                     tabPageCustomersDetail.Text = "Add Customers";
                 };
 
-                BtnCancelC.Click += delegate{
+                BtnCancelC.Click += delegate
+                {
                     CancelEvent?.Invoke(this, EventArgs.Empty);
 
                     tabControl1.TabPages.Remove(tabPageCustomersDetail);
@@ -147,7 +158,7 @@ namespace Supermarket_mvp.views
         {
             get { return menssage; }
             set { menssage = value; }
-        } 
+        }
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
@@ -160,11 +171,11 @@ namespace Supermarket_mvp.views
             DgCustomers.DataSource = CustomersList;
         }
         private static CustomersView instance;
-        private TabPage tabPageCustomersList;
 
-        public  static CustomersView GetInstance(Form parentContainer)
+
+        public static CustomersView GetInstance(Form parentContainer)
         {
-            if (instance == null   || instance.IsDisposed)
+            if (instance == null || instance.IsDisposed)
             {
                 instance = new CustomersView();
                 instance.MdiParent = parentContainer;
@@ -177,7 +188,7 @@ namespace Supermarket_mvp.views
                 if (instance.WindowState == FormWindowState.Minimized)
                 {
                     instance.WindowState = FormWindowState.Normal;
-                }   
+                }
                 instance.BringToFront();
             }
             return instance;
