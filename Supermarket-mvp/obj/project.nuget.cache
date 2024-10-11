@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "img+8jSEsEc=",
+  "dgSpecHash": "4pE/ly8Ht14=",
   "success": true,
-  "projectFilePath": "C:\\Users\\38513494\\Desktop\\Supermarket\\Supermarket-mvp\\Supermarket-mvp.csproj",
+  "projectFilePath": "C:\\Users\\38513494\\Desktop\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\38513494\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\38513494\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
