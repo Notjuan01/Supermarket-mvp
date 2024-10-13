@@ -78,9 +78,32 @@ namespace Supermarket_mvp.views
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 
+
         public void SetCategoriesListBildingSource(BindingSource customersList)
         {
            DgCategories.DataSource = customersList;
         }
+        private static CategoriesView instance;
+        internal static CategoriesView GetInstance(MainView parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new CategoriesView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
     }
-}
+    }
+

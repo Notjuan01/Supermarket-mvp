@@ -23,8 +23,14 @@ namespace Supermarket_mvp.presenters
 
             this.mainView.ShowPayModeView += ShowPayModeView;
             this.mainView.ShowCustomerView += ShowCustomersView;
+            this.mainView.ShowCategoriesView += ShowCategoriesView;
         }
-
+        private void ShowCategoriesView(object? sender, EventArgs e)
+        {
+            ICategoriesView view = CategoriesView.GetInstance((MainView)mainView);
+            ICategoriesRepository repository = new CategoriesRepository(sqlConnectionString);
+            new CustomersPresenter(view, repository);
+        }
         private void ShowCustomersView(object? sender, EventArgs e)
         {
             ICustomersView view = CustomersView.GetInstance((MainView)mainView);

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             panel1 = new Panel();
+            BtnCategories = new Button();
             BtCustomers = new Button();
             BtnExit = new Button();
             BtPayMode = new Button();
@@ -40,6 +41,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnCategories);
             panel1.Controls.Add(BtCustomers);
             panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtPayMode);
@@ -47,8 +49,18 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 450);
+            panel1.Size = new Size(200, 493);
             panel1.TabIndex = 0;
+            // 
+            // BtnCategories
+            // 
+            BtnCategories.BackgroundImage = Properties.Resources.categorias;
+            BtnCategories.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCategories.Location = new Point(0, 254);
+            BtnCategories.Name = "BtnCategories";
+            BtnCategories.Size = new Size(197, 76);
+            BtnCategories.TabIndex = 4;
+            BtnCategories.UseVisualStyleBackColor = true;
             // 
             // BtCustomers
             // 
@@ -65,7 +77,7 @@
             BtnExit.BackgroundImage = Properties.Resources.cerrar_sesion;
             BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
             BtnExit.Dock = DockStyle.Bottom;
-            BtnExit.Location = new Point(0, 371);
+            BtnExit.Location = new Point(0, 414);
             BtnExit.Name = "BtnExit";
             BtnExit.Size = new Size(200, 79);
             BtnExit.TabIndex = 2;
@@ -95,7 +107,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 493);
             Controls.Add(panel1);
             IsMdiContainer = true;
             Name = "MainView";
@@ -112,6 +124,7 @@
         private Button BtPayMode;
         private PictureBox pictureBox1;
         private Button BtnExit;
+        private Button BtnCategories;
         private Button BtCustomers;
     }
 }

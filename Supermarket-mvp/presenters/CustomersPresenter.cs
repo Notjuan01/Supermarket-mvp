@@ -16,6 +16,8 @@ namespace Supermarket_mvp.presenters
         private ICustomersRepostory repository;
         private BindingSource customersBindingSource;
         private IEnumerable<CustomersModel> customersList;
+        private ICategoriesView view1;
+        private ICategoriesRepository repository1;
 
         public CustomersPresenter(ICustomersView view, ICustomersRepostory repository)
         {
@@ -36,6 +38,12 @@ namespace Supermarket_mvp.presenters
             LoadAllCustomersList();
 
             this.view.Show();
+        }
+
+        public CustomersPresenter(ICategoriesView view1, ICategoriesRepository repository1)
+        {
+            this.view1 = view1;
+            this.repository1 = repository1;
         }
 
         private void LoadAllCustomersList()
