@@ -32,7 +32,7 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             tabControl1 = new TabControl();
-            tabPageCustomersList = new TabPage();
+            tabPageCustomersLists = new TabPage();
             BtnSearch = new Button();
             BtnClose = new Button();
             BtnDelete = new Button();
@@ -41,7 +41,7 @@
             DgCustomers = new DataGridView();
             TxtSearchC = new TextBox();
             LblSearch = new Label();
-            tabPageCustomersDetail = new TabPage();
+            tabPageCustomersDetails = new TabPage();
             TxtDocument = new TextBox();
             label2 = new Label();
             BtnCancelC = new Button();
@@ -63,9 +63,9 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
-            tabPageCustomersList.SuspendLayout();
+            tabPageCustomersLists.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomers).BeginInit();
-            tabPageCustomersDetail.SuspendLayout();
+            tabPageCustomersDetails.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -100,8 +100,8 @@
             // 
             // tabControl1
             // 
-            tabControl1.Controls.Add(tabPageCustomersList);
-            tabControl1.Controls.Add(tabPageCustomersDetail);
+            tabControl1.Controls.Add(tabPageCustomersLists);
+            tabControl1.Controls.Add(tabPageCustomersDetails);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 100);
             tabControl1.Name = "tabControl1";
@@ -111,21 +111,21 @@
             // 
             // tabPageCustomersList
             // 
-            tabPageCustomersList.Controls.Add(BtnSearch);
-            tabPageCustomersList.Controls.Add(BtnClose);
-            tabPageCustomersList.Controls.Add(BtnDelete);
-            tabPageCustomersList.Controls.Add(BtnEdit);
-            tabPageCustomersList.Controls.Add(BtnNew);
-            tabPageCustomersList.Controls.Add(DgCustomers);
-            tabPageCustomersList.Controls.Add(TxtSearchC);
-            tabPageCustomersList.Controls.Add(LblSearch);
-            tabPageCustomersList.Location = new Point(4, 24);
-            tabPageCustomersList.Name = "tabPageCustomersList";
-            tabPageCustomersList.Padding = new Padding(3);
-            tabPageCustomersList.Size = new Size(792, 322);
-            tabPageCustomersList.TabIndex = 0;
-            tabPageCustomersList.Text = "Customers List";
-            tabPageCustomersList.UseVisualStyleBackColor = true;
+            tabPageCustomersLists.Controls.Add(BtnSearch);
+            tabPageCustomersLists.Controls.Add(BtnClose);
+            tabPageCustomersLists.Controls.Add(BtnDelete);
+            tabPageCustomersLists.Controls.Add(BtnEdit);
+            tabPageCustomersLists.Controls.Add(BtnNew);
+            tabPageCustomersLists.Controls.Add(DgCustomers);
+            tabPageCustomersLists.Controls.Add(TxtSearchC);
+            tabPageCustomersLists.Controls.Add(LblSearch);
+            tabPageCustomersLists.Location = new Point(4, 24);
+            tabPageCustomersLists.Name = "tabPageCustomersList";
+            tabPageCustomersLists.Padding = new Padding(3);
+            tabPageCustomersLists.Size = new Size(792, 322);
+            tabPageCustomersLists.TabIndex = 0;
+            tabPageCustomersLists.Text = "Customers List";
+            tabPageCustomersLists.UseVisualStyleBackColor = true;
             // 
             // BtnSearch
             // 
@@ -218,31 +218,31 @@
             // 
             // tabPageCustomersDetail
             // 
-            tabPageCustomersDetail.Controls.Add(TxtDocument);
-            tabPageCustomersDetail.Controls.Add(label2);
-            tabPageCustomersDetail.Controls.Add(BtnCancelC);
-            tabPageCustomersDetail.Controls.Add(BtnSaveC);
-            tabPageCustomersDetail.Controls.Add(TxtEmailC);
-            tabPageCustomersDetail.Controls.Add(LblEmailC);
-            tabPageCustomersDetail.Controls.Add(TxtPhoneC);
-            tabPageCustomersDetail.Controls.Add(LblPhone);
-            tabPageCustomersDetail.Controls.Add(TxtBirthdayC);
-            tabPageCustomersDetail.Controls.Add(LblBirthday);
-            tabPageCustomersDetail.Controls.Add(TxtAddress);
-            tabPageCustomersDetail.Controls.Add(LblAddress);
-            tabPageCustomersDetail.Controls.Add(TxtLastName);
-            tabPageCustomersDetail.Controls.Add(LblLastName);
-            tabPageCustomersDetail.Controls.Add(textBox2);
-            tabPageCustomersDetail.Controls.Add(TxtcName);
-            tabPageCustomersDetail.Controls.Add(TxtCId);
-            tabPageCustomersDetail.Controls.Add(TxtCustomersId);
-            tabPageCustomersDetail.Location = new Point(4, 24);
-            tabPageCustomersDetail.Name = "tabPageCustomersDetail";
-            tabPageCustomersDetail.Padding = new Padding(3);
-            tabPageCustomersDetail.Size = new Size(792, 322);
-            tabPageCustomersDetail.TabIndex = 1;
-            tabPageCustomersDetail.Text = "Customers Detail";
-            tabPageCustomersDetail.UseVisualStyleBackColor = true;
+            tabPageCustomersDetails.Controls.Add(TxtDocument);
+            tabPageCustomersDetails.Controls.Add(label2);
+            tabPageCustomersDetails.Controls.Add(BtnCancelC);
+            tabPageCustomersDetails.Controls.Add(BtnSaveC);
+            tabPageCustomersDetails.Controls.Add(TxtEmailC);
+            tabPageCustomersDetails.Controls.Add(LblEmailC);
+            tabPageCustomersDetails.Controls.Add(TxtPhoneC);
+            tabPageCustomersDetails.Controls.Add(LblPhone);
+            tabPageCustomersDetails.Controls.Add(TxtBirthdayC);
+            tabPageCustomersDetails.Controls.Add(LblBirthday);
+            tabPageCustomersDetails.Controls.Add(TxtAddress);
+            tabPageCustomersDetails.Controls.Add(LblAddress);
+            tabPageCustomersDetails.Controls.Add(TxtLastName);
+            tabPageCustomersDetails.Controls.Add(LblLastName);
+            tabPageCustomersDetails.Controls.Add(textBox2);
+            tabPageCustomersDetails.Controls.Add(TxtcName);
+            tabPageCustomersDetails.Controls.Add(TxtCId);
+            tabPageCustomersDetails.Controls.Add(TxtCustomersId);
+            tabPageCustomersDetails.Location = new Point(4, 24);
+            tabPageCustomersDetails.Name = "tabPageCustomersDetail";
+            tabPageCustomersDetails.Padding = new Padding(3);
+            tabPageCustomersDetails.Size = new Size(792, 322);
+            tabPageCustomersDetails.TabIndex = 1;
+            tabPageCustomersDetails.Text = "Customers Detail";
+            tabPageCustomersDetails.UseVisualStyleBackColor = true;
             // 
             // TxtDocument
             // 
@@ -422,11 +422,11 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
-            tabPageCustomersList.ResumeLayout(false);
-            tabPageCustomersList.PerformLayout();
+            tabPageCustomersLists.ResumeLayout(false);
+            tabPageCustomersLists.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DgCustomers).EndInit();
-            tabPageCustomersDetail.ResumeLayout(false);
-            tabPageCustomersDetail.PerformLayout();
+            tabPageCustomersDetails.ResumeLayout(false);
+            tabPageCustomersDetails.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -436,8 +436,8 @@
         private PictureBox pictureBox1;
         private Label label1;
         private TabControl tabControl1;
-        private TabPage tabPageCustomersList;
-        private TabPage tabPageCustomersDetail;
+        private TabPage tabPageCustomersLists;
+        private TabPage tabPageCustomersDetails;
         private Label LblSearch;
         private TextBox TxtSearchC;
         private Button BtnClose;

@@ -305,11 +305,13 @@
         }
 
         #endregion
-
+        
         private Panel panel1;
         private Label label1;
         private PictureBox pictureBox1;
         private TabControl tabControl1;
+        private TabPage tabCategoriesModeList;
+        private TabPage tabCategoriesModeDetail;
         private TabPage tabPageCategoriesList;
         private TabPage tabPageCategoriesDetails;
         private Button BtnSearch;

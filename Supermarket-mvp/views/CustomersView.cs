@@ -23,7 +23,7 @@ namespace Supermarket_mvp.views
             InitializeComponent();
             AssociateAndRaizeViewEvents();
 
-            tabControl1.TabPages.Remove(tabPageCustomersDetail);
+            tabControl1.TabPages.Remove(tabPageCustomersDetails);
             BtnClose.Click += delegate { this.Close(); };
         }
 
@@ -41,17 +41,17 @@ namespace Supermarket_mvp.views
             {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
 
-                tabControl1.TabPages.Remove(tabPageCustomersList);
-                tabControl1.TabPages.Add(tabPageCustomersDetail);
-                tabPageCustomersDetail.Text = "Add New Customers";
+                tabControl1.TabPages.Remove(tabPageCustomersLists);
+                tabControl1.TabPages.Add(tabPageCustomersDetails);
+                tabPageCustomersDetails.Text = "Add New Customers";
             };
             BtnEdit.Click += delegate
             {
                 EditEvent?.Invoke(this, EventArgs.Empty);
 
-                tabControl1.TabPages.Remove(tabPageCustomersList);
-                tabControl1.TabPages.Add(tabPageCustomersDetail);
-                tabPageCustomersDetail.Text = "Edit New Customers";
+                tabControl1.TabPages.Remove(tabPageCustomersLists);
+                tabControl1.TabPages.Add(tabPageCustomersDetails);
+                tabPageCustomersDetails.Text = "Edit New Customers";
             };
             BtnDelete.Click += delegate
             {
@@ -74,25 +74,25 @@ namespace Supermarket_mvp.views
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 if (isSuccessfull)
                 {
-                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
-                    tabControl1.TabPages.Add(tabPageCustomersList);
+                    tabControl1.TabPages.Remove(tabPageCustomersDetails);
+                    tabControl1.TabPages.Add(tabPageCustomersLists);
                 }
                 MessageBox.Show(Message);
             };
             {
                 {
                     AddNewEvent?.Invoke(this, EventArgs.Empty);
-                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
-                    tabControl1.TabPages.Add(tabPageCustomersDetail);
-                    tabPageCustomersDetail.Text = "Add Customers";
+                    tabControl1.TabPages.Remove(tabPageCustomersDetails);
+                    tabControl1.TabPages.Add(tabPageCustomersDetails);
+                    tabPageCustomersDetails.Text = "Add Customers";
                 };
 
                 BtnCancelC.Click += delegate
                 {
                     CancelEvent?.Invoke(this, EventArgs.Empty);
 
-                    tabControl1.TabPages.Remove(tabPageCustomersDetail);
-                    tabControl1.TabPages.Add(tabPageCustomersList);
+                    tabControl1.TabPages.Remove(tabPageCustomersDetails);
+                    tabControl1.TabPages.Add(tabPageCustomersLists);
                 };
             }
         }

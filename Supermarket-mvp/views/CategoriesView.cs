@@ -35,6 +35,18 @@ namespace Supermarket_mvp.views
                 SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            BtnNew.Click += delegate { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+                tabControl1.TabPages.Remove(tabCategoriesModeList);
+                tabControl1.TabPages.Add(tabCategoriesModeDetail);
+                tabCategoriesModeDetail.Text = "Add New Categories";
+            };
+
+            BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
+            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSave.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            BtnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
         }
 
         public string CategoriesId 
@@ -84,6 +96,8 @@ namespace Supermarket_mvp.views
            DgCategories.DataSource = customersList;
         }
         private static CategoriesView instance;
+        
+
         internal static CategoriesView GetInstance(MainView parentContainer)
         {
             if (instance == null || instance.IsDisposed)

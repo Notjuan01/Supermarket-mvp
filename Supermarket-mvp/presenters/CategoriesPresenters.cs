@@ -56,7 +56,7 @@ namespace Supermarket_mvp.presenters
 
         private void AddNewCustomers(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Hizo clic en el boton nuevo");
         }
 
         private void LoadSelectCategoriesToEdit(object? sender, EventArgs e)
