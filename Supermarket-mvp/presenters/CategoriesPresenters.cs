@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Supermarket_mvp.views;
 using Supermarket_mvp.Models;
 
-namespace Supermarket_mvp.presenters.Common
+namespace Supermarket_mvp.presenters
 {
     internal class CategoriesPresenters
     {
@@ -16,9 +16,9 @@ namespace Supermarket_mvp.presenters.Common
         private IEnumerable<CategoriesModel> categoriesList;
 
 
-        public CategoriesPresenters(ICategoriesView view,ICategoriesRepository repository)
+        public CategoriesPresenters(ICategoriesView view, ICategoriesRepository repository)
         {
-            this.categoriesBindingSource = new BindingSource();
+            categoriesBindingSource = new BindingSource();
             this.view = view;
             this.repository = repository;
 
@@ -42,10 +42,10 @@ namespace Supermarket_mvp.presenters.Common
         }
         private void SearchCustomers(object? sender, EventArgs e)
         {
-            bool emptyValue = string.IsNullOrEmpty(this.view.SearchValue);
+            bool emptyValue = string.IsNullOrEmpty(view.SearchValue);
             if (emptyValue == false)
             {
-                categoriesList = repository.GetByValue(this.view.SearchValue);
+                categoriesList = repository.GetByValue(view.SearchValue);
             }
             else
             {

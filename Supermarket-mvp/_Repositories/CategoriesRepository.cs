@@ -87,7 +87,7 @@ namespace Supermarket_mvp._Repositories
                             var categoriesModel = new CategoriesModel();
                             categoriesModel.Id = (int)reader["Categories_Id"];
                             categoriesModel.Name = reader["Categories_Name"].ToString();
-                            categoriesModel.Description = reader["Categories_Observation"].ToString();
+                            categoriesModel.Description = reader["Categories_Description"].ToString();
                             categoriesList.Add(categoriesModel);
                         }
                     }

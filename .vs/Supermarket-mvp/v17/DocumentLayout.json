@@ -19,10 +19,6 @@
       "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\juanp\\onedrive\\escritorio\\supermarket\\supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\mainview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\supermarket-mvp\\views\\categoriesview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A3DFC76C-2345-4DA7-AAE9-B2710D1EF937}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\categoriesview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,28 +54,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainView.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\MainView.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\views\\MainView.cs",
-              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\MainView.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Supermarket-mvp\\views\\MainView.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T17:49:11.224Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "MainView.cs",
               "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\MainView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\views\\MainView.cs",
               "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\MainView.cs",
               "RelativeToolTip": "Supermarket-mvp\\views\\MainView.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAhwB0AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T17:31:13.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T17:31:13.092Z"
             },
             {
               "$type": "Document",
@@ -102,10 +85,9 @@
               "RelativeDocumentMoniker": "Supermarket-mvp\\presenters\\MainPresenter.cs",
               "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\presenters\\MainPresenter.cs",
               "RelativeToolTip": "Supermarket-mvp\\presenters\\MainPresenter.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABkAAAAaAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T17:14:08.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-13T17:14:08.553Z"
             },
             {
               "$type": "Document",
@@ -115,26 +97,25 @@
               "RelativeDocumentMoniker": "Supermarket-mvp\\_Repositories\\CategoriesRepository.cs",
               "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\_Repositories\\CategoriesRepository.cs",
               "RelativeToolTip": "Supermarket-mvp\\_Repositories\\CategoriesRepository.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAqwH8AAAAFAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAD4v1oAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T18:39:10.474Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "CategoriesView.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\CategoriesView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\views\\CategoriesView.cs",
               "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\CategoriesView.cs [Dise\u00F1o]",
               "RelativeToolTip": "Supermarket-mvp\\views\\CategoriesView.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:11:16.931Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-11T21:11:16.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "ICategoriesView.cs",
               "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\views\\ICategoriesView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\views\\ICategoriesView.cs",
@@ -142,12 +123,11 @@
               "RelativeToolTip": "Supermarket-mvp\\views\\ICategoriesView.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T21:03:10.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T21:03:10.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "CategoriesModel.cs",
               "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\Models\\CategoriesModel.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Models\\CategoriesModel.cs",
@@ -155,12 +135,11 @@
               "RelativeToolTip": "Supermarket-mvp\\Models\\CategoriesModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T20:28:57.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T20:28:57.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "ICategoriesRepository.cs",
               "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Supermarket\\Supermarket-mvp\\Models\\ICategoriesRepository.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Models\\ICategoriesRepository.cs",
@@ -168,8 +147,7 @@
               "RelativeToolTip": "Supermarket-mvp\\Models\\ICategoriesRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T20:28:30.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T20:28:30.496Z"
             }
           ]
         }
